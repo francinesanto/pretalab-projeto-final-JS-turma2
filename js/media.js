@@ -48,7 +48,7 @@ function calcularMedia() {
       const resultado = document.createElement('p')
       divContent.appendChild(resultado)
       resultado.innerText = `Sua nota total: ${soma} e você obteve média de  ${media} Notão! `
-  }else{
+  } else{
     const divContent = document.querySelector('#contentCalcMedias')
       const resultado = document.createElement('p')
       divContent.appendChild(resultado)
