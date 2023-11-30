@@ -11,6 +11,53 @@
     6. Se a nota for entre 10, mostre na tela: 
       "Hoje é seu aniversário? Pq você ta de parabéns! 10 de média"
 */
-function calcularMedia() {
+const botaoMedia = document.querySelector('#btnSituacao')
 
+function calcularMedia() {
+  const nota1 = Number(document.querySelector('#nota1').value)
+  const nota2 = Number(document.querySelector('#nota2').value)
+  const nota3 = Number(document.querySelector('#nota3').value)
+  const nota4 = Number(document.querySelector('#nota4').value)
+  
+  const soma = nota1 + nota2 + nota3 + nota4
+
+  const media = soma / 4
+
+  if(media === 0 ){
+      const divContent = document.querySelector('#contentCalcMedias')
+      const resultado = document.createElement('p')
+      divContent.appendChild(resultado)
+      resultado.innerText = `Sua nota total: ${soma} e você obteve média de ${media} infelizmente você zerou a prova :( `
+  } else if(media >= 0.1 && media <= 3){
+      const divContent = document.querySelector('#contentCalcMedias')
+      const resultado = document.createElement('p')
+      divContent.appendChild(resultado)
+      resultado.innerText = `Sua nota total: ${soma} e você obteve média de  ${media} estude mais e tente novamente! `
+  } else if(media >= 3.1 && media <= 5.9){
+      const divContent = document.querySelector('#contentCalcMedias')
+      const resultado = document.createElement('p')
+      divContent.appendChild(resultado)
+      resultado.innerText = `Sua nota total: ${soma} e você obteve média de  ${media} Falta pouco para a média! `
+  } else if(media >= 6 && media <= 7){
+    const divContent = document.querySelector('#contentCalcMedias')
+      const resultado = document.createElement('p')
+      divContent.appendChild(resultado)
+      resultado.innerText = `Sua nota total: ${soma} e você obteve média de  ${media} Você está na média! `
+  } else if(media >= 7.1 && media <= 9.9){
+    const divContent = document.querySelector('#contentCalcMedias')
+      const resultado = document.createElement('p')
+      divContent.appendChild(resultado)
+      resultado.innerText = `Sua nota total: ${soma} e você obteve média de  ${media} Notão! `
+  }else{
+    const divContent = document.querySelector('#contentCalcMedias')
+      const resultado = document.createElement('p')
+      divContent.appendChild(resultado)
+      resultado.innerText = `Hoje é seu aniversário? Pq você ta de parabéns! 10 de média `
+  }
+
+
+
+  
 }
+
+botaoMedia.addEventListener('click', calcularMedia)
