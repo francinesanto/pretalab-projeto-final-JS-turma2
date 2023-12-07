@@ -44,21 +44,6 @@ const resultado = document.createElement('p')
 divContent.appendChild(resultado)
 resultado.innerText = mensagem
 
-function limparInput(){
-    document.querySelector('#nota1').value = ''
-    document.querySelector('#nota2').value = ''
-    document.querySelector('#nota3').value = ''
-    document.querySelector('#nota4').value = ''
-
-    const paragrafo = document.querySelector('#contentCalcMedias').lastChild
-    while (paragrafo.lastChild) {
-      paragrafo.removeChild(paragrafo.lastChild);
-      }
-}
-
-setInterval(function(){
-    limparInput()
-}, 10 * 1000)
 
 }
 
