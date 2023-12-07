@@ -26,7 +26,7 @@ function calcularMedia() {
   let mensagem = ''
 
   if(media === 0 ){
-      mensagem = `Você obteve média de ${media},git gi infelizmente você zerou a prova :( `
+      mensagem = `Você obteve média de ${media}, infelizmente você zerou a prova :( `
   } else if(media >= 0.1 && media <= 3){
      mensagem = `Você obteve média de  ${media}, estude mais e tente novamente! `
   } else if(media >= 3.1 && media <= 5.9){
