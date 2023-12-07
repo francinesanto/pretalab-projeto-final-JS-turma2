@@ -2,7 +2,7 @@
 1. Crie variáveis que capturem os valores que a usuária inserir e manipule-os nas funções 
 2. Exibir o resultado na tela
 */
-
+const botaoSomar = document.querySelector('#botaoSomar')
 const botaoSubtrair = document.querySelector('#botaoSub')
 const botaoMult = document.querySelector('#botaoMult')
 const botaoDiv = document.querySelector('#botaoDiv')
@@ -19,6 +19,19 @@ function somar() {
     const resultado = document.createElement('strong')
     paragrafo.appendChild(resultado)
     resultado.innerText = total
+
+    function limparInput(){
+        document.querySelector('#numero1Soma').value = ''
+        document.querySelector('#numero2Soma').value = ''
+        const paragrafo = document.querySelector('#resultadoSoma').lastChild
+        while (paragrafo.lastChild) {
+          paragrafo.removeChild(paragrafo.lastChild);
+          }
+    }
+
+    setInterval(function(){
+        limparInput()
+    }, 7 *1000)
     
 }
 
@@ -35,6 +48,19 @@ function subtrair() {
     paragrafo.appendChild(resultado)
     resultado.innerText = total
 
+    function limparInput(){
+        document.querySelector('#numero1Sub').value = ''
+        document.querySelector('#numero2Sub').value = ''
+        const paragrafo = document.querySelector('#resultadoSub').lastChild
+        while (paragrafo.lastChild) {
+          paragrafo.removeChild(paragrafo.lastChild);
+          }
+    }
+
+    setInterval(function(){
+        limparInput()
+    }, 7 *1000)
+    
 }
 
 
@@ -50,6 +76,21 @@ function multiplicar() {
     const resultado = document.createElement('strong')
     paragrafo.appendChild(resultado)
     resultado.innerText = total
+
+    
+    function limparInput(){
+        document.querySelector('#numero1Mult').value = ''
+        document.querySelector('#numero2Mult').value = ''
+        const paragrafo = document.querySelector('#resultadoMult').lastChild
+        while (paragrafo.lastChild) {
+          paragrafo.removeChild(paragrafo.lastChild);
+          }
+    }
+
+    setInterval(function(){
+        limparInput()
+    }, 7 *1000)
+    
     
 }
 
@@ -64,9 +105,24 @@ function dividir() {
     paragrafo.appendChild(resultado)
     resultado.innerText = total
 
+    
+    function limparInput(){
+        document.querySelector('#numero1Div').value = ''
+        document.querySelector('#numero2Div').value = ''
+        const paragrafo = document.querySelector('#resultadoDiv').lastChild
+        while (paragrafo.lastChild) {
+          paragrafo.removeChild(paragrafo.lastChild);
+          }
+    }
+
+    setInterval(function(){
+        limparInput()
+    }, 7 *1000)
+    
+
 }
 
-
+botaoSomar.addEventListener('click,', somar)
 botaoSubtrair.addEventListener('click', subtrair)
 botaoMult.addEventListener('click', multiplicar)
 botaoDiv.addEventListener('click', dividir)

@@ -23,6 +23,8 @@ function calcularMedia() {
 
   const media = soma / 4
 
+  const mensagem = 
+
   if(media === 0 ){
       const divContent = document.querySelector('#contentCalcMedias')
       const resultado = document.createElement('p')
