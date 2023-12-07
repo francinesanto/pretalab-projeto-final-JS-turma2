@@ -2,7 +2,7 @@
 1. Crie variáveis que capturem os valores que a usuária inserir e manipule-os nas funções 
 2. Exibir o resultado na tela
 */
-const botaoSomar = document.querySelector('#botaoSomar')
+
 const botaoSubtrair = document.querySelector('#botaoSub')
 const botaoMult = document.querySelector('#botaoMult')
 const botaoDiv = document.querySelector('#botaoDiv')
@@ -122,7 +122,7 @@ function dividir() {
 
 }
 
-botaoSomar.addEventListener('click,', somar)
+
 botaoSubtrair.addEventListener('click', subtrair)
 botaoMult.addEventListener('click', multiplicar)
 botaoDiv.addEventListener('click', dividir)
