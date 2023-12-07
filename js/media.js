@@ -49,6 +49,8 @@ function limparInput(){
     document.querySelector('#nota2').value = ''
     document.querySelector('#nota3').value = ''
     document.querySelector('#nota4').value = ''
+    const div=document.querySelector('#contentCalcMedias')
+    div.removeChild(div.lastChild)
 }
 
 setInterval(function(){
