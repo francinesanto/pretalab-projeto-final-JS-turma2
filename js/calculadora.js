@@ -8,33 +8,18 @@ const botaoMult = document.querySelector('#botaoMult')
 const botaoDiv = document.querySelector('#botaoDiv')
 
 function somar() {
+    
     const num1 = Number(document.querySelector('#numero1Soma').value)
-    const num2 = Number(document.querySelector('#numero1Soma').value)
+    const num2 = Number(document.querySelector('#numero2Soma').value)
 
     const total = num1 + num2
 
-    document.querySelector('.resultado').setAttribute('id','resultadoSoma')
+    document.getElementById('strongSoma').innerHTML = total
 
-    const paragrafo = document.querySelector('#resultadoSoma')
-    const resultado = document.createElement('strong')
-    paragrafo.appendChild(resultado)
-    resultado.innerText = total
+    document.querySelector("#numero1Soma").value =''
+    document.querySelector("#numero2Soma").value =''
 
-    function limparInput(){
-        document.querySelector('#numero1Soma').value = ''
-        document.querySelector('#numero2Soma').value = ''
-        const paragrafo = document.querySelector('#resultadoSoma').lastChild
-        while (paragrafo.lastChild) {
-          paragrafo.removeChild(paragrafo.lastChild);
-          }
-    }
-
-    setInterval(function(){
-        limparInput()
-    }, 7 *1000)
-    
 }
-
 
 
 function subtrair() {
@@ -43,24 +28,11 @@ function subtrair() {
 
     const total = num1 - num2
 
-    const paragrafo = document.querySelector('#resultadoSub')
-    const resultado = document.createElement('strong')
-    paragrafo.appendChild(resultado)
-    resultado.innerText = total
+    document.getElementById('strongSub').innerHTML = total
 
-    function limparInput(){
-        document.querySelector('#numero1Sub').value = ''
-        document.querySelector('#numero2Sub').value = ''
-        const paragrafo = document.querySelector('#resultadoSub').lastChild
-        while (paragrafo.lastChild) {
-          paragrafo.removeChild(paragrafo.lastChild);
-          }
-    }
-
-    setInterval(function(){
-        limparInput()
-    }, 7 *1000)
-    
+    document.querySelector("#numero1Sub").value =''
+    document.querySelector("#numero2Sub").value =''
+ 
 }
 
 
@@ -72,26 +44,11 @@ function multiplicar() {
 
     const total = num1 * num2
 
-    const paragrafo = document.querySelector('#resultadoMult')
-    const resultado = document.createElement('strong')
-    paragrafo.appendChild(resultado)
-    resultado.innerText = total
+    document.getElementById('strongMult').innerHTML = total
 
-    
-    function limparInput(){
-        document.querySelector('#numero1Mult').value = ''
-        document.querySelector('#numero2Mult').value = ''
-        const paragrafo = document.querySelector('#resultadoMult').lastChild
-        while (paragrafo.lastChild) {
-          paragrafo.removeChild(paragrafo.lastChild);
-          }
-    }
-
-    setInterval(function(){
-        limparInput()
-    }, 7 *1000)
-    
-    
+    document.querySelector("#numero1Mult").value =''
+    document.querySelector("#numero2Mult").value =''
+   
 }
 
 function dividir() {
@@ -100,26 +57,10 @@ function dividir() {
 
     const total = num1 / num2
 
-    const paragrafo = document.querySelector('#resultadoDiv')
-    const resultado = document.createElement('strong')
-    paragrafo.appendChild(resultado)
-    resultado.innerText = total
+    document.getElementById('strongDiv').innerHTML = total
 
-    
-    function limparInput(){
-        document.querySelector('#numero1Div').value = ''
-        document.querySelector('#numero2Div').value = ''
-        const paragrafo = document.querySelector('#resultadoDiv').lastChild
-        while (paragrafo.lastChild) {
-          paragrafo.removeChild(paragrafo.lastChild);
-          }
-    }
-
-    setInterval(function(){
-        limparInput()
-    }, 7 *1000)
-    
-
+    document.querySelector("#numero1Div").value =''
+    document.querySelector("#numero2Div").value =''
 }
 
 

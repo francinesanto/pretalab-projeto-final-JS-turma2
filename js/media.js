@@ -19,9 +19,7 @@ function calcularMedia() {
   const nota3 = Number(document.querySelector('#nota3').value)
   const nota4 = Number(document.querySelector('#nota4').value)
   
-  const soma = nota1 + nota2 + nota3 + nota4
-
-  let media = soma / 4
+  const media = (nota1 + nota2 + nota3 + nota4) /4
 
   let mensagem = ''
 
@@ -39,24 +37,12 @@ function calcularMedia() {
       mensagem = `Hoje é seu aniversário? Pq você ta de parabéns! 10 de média `
   }
 
-const divContent = document.querySelector('#contentCalcMedias')
-const resultado = document.createElement('p')
-divContent.appendChild(resultado)
-resultado.innerText = mensagem
+  document.getElementById('fraseResultado').innerHTML = mensagem
 
-function limparInput(){
-    document.querySelector('#nota1').value = ''
-    document.querySelector('#nota2').value = ''
-    document.querySelector('#nota3').value = ''
-    document.querySelector('#nota4').value = ''
-    const div=document.querySelector('#contentCalcMedias')
-    div.removeChild(div.lastChild)
-}
-
-setInterval(function(){
-    limparInput()
-}, 10 * 1000)
-
+  document.querySelector('#nota1').value = ''
+  document.querySelector('#nota2').value = ''
+  document.querySelector('#nota3').value = ''
+  document.querySelector('#nota4').value = ''
 }
 
 botaoMedia.addEventListener('click', calcularMedia)
